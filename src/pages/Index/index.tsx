@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
+
 import LateralMenu from '../../components/LateralMenu'
+import Topo from '../../components/Topo'
 
 import './styles.scss'
 
@@ -26,7 +28,7 @@ const Index: React.FC = () => {
     <div className="container">
       <LateralMenu page={page} />
       <div  className="wrapper" onScroll={handleScrollWrapper}>
-        
+        <Topo />
       </div>
     </div>
   )
