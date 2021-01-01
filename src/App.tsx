@@ -1,15 +1,15 @@
 import React from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import GlobalStyles from './styles/GlobalStyles'
+import Index from './pages/Index';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <>
-      <h1>
-        Teste
-      </h1>
-      <GlobalStyles />
-    </>
+    <Router>
+      <Switch>
+        <Route path ='/' component={Index} />
+      </Switch>
+    </Router>
   )
 }
 
