@@ -1,0 +1,86 @@
+header {
+  padding: 0 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .left-side {
+    flex-grow: 1;
+    padding-right: 5rem;
+
+    ul.menu {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      list-style: none;
+      padding: 2rem 0;
+
+      li {
+        font-weight: 400;
+        font-size: 1rem;
+        color: #494949;
+        cursor: pointer;
+        transition: all .3s;
+
+        &.active {
+          color: #FF9D00;
+        }
+
+        &:hover {
+          color: #FF9D00;
+        }
+
+        &.button {
+          padding: 0.7rem 1.3rem;
+          border: 1px solid #494949;
+          border-radius: 4rem;
+
+          &:hover {
+            background-color: #FF9D00;
+            border-color: #FF9D00;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  .right-side {
+    display: flex;
+    align-items: center;
+
+    .content-icons {
+      display: flex;
+      align-items: center;
+      margin-right: 1rem;
+
+      .icon {
+        width: 1.7rem;
+        height: 1.7rem;
+        border-radius: 50%;
+        background-color: #ccc;
+        color: #fff;
+        margin-right: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background-color .3s;
+
+        svg {
+          width: 1rem;
+          height: 1rem;
+        }
+
+        &:hover {
+          background-color: #FF9D00;
+        }
+      }
+    }
+    span.phone {
+      font-weight: 600;
+      font-size: 1rem;
+      border-left: 2px solid #ccc;
+      padding-left: 2rem;
+    }
+  }
+}
