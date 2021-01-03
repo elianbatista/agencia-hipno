@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 import LateralMenu from '../../components/LateralMenu'
 import Topo from '../../components/Topo'
+import Banner from '../../components/Banner'
 
 import './styles.scss'
 
@@ -29,6 +30,7 @@ const Index: React.FC = () => {
       <LateralMenu page={page} />
       <div  className="wrapper" onScroll={handleScrollWrapper}>
         <Topo />
+        <Banner />
       </div>
     </div>
   )
