@@ -4,6 +4,7 @@ import Banner1 from '../../images/banner/banner1.png'
 import RightArrow from '../../images/icons/right-arrow.png'
 
 import Zoom from 'react-reveal/Zoom'
+import Flip from 'react-reveal/Flip'
 
 import './styles.scss'
 
@@ -11,11 +12,9 @@ const Banner = () => {
   return (
     <div className="carousel">
       <div className="box-carousel first">
-        <Zoom>
-          <div className="content-img">
-            <img src={Banner1} alt="Banner 1 Agência Hipno"/>
-          </div>
-        </Zoom>
+        <div className="content-img">
+          <img src={Banner1} alt="Banner 1 Agência Hipno"/>
+        </div>
         <div className="content-title">
           <h1>
             Reencontre sua <strong>marca</strong> <br/>
