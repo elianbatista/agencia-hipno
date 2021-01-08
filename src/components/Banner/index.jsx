@@ -3,9 +3,6 @@ import React from 'react'
 import Banner1 from '../../images/banner/banner1.png'
 import RightArrow from '../../images/icons/right-arrow.png'
 
-import Zoom from 'react-reveal/Zoom'
-import Flip from 'react-reveal/Flip'
-
 import './styles.scss'
 
 const Banner = () => {
