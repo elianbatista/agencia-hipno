@@ -5,9 +5,11 @@ import Banner2 from '../../images/banner/banner2.png'
 import Banner3 from '../../images/banner/banner3.png'
 import RightArrow from '../../images/icons/right-arrow.png'
 
+import Fade from 'react-reveal/Fade'
+
 import './styles.scss'
 
-const Banner: React.FC = () => {
+const Banner = () => {
 
   const [banner, setBanner] = useState(1)
 
@@ -54,44 +56,46 @@ const Banner: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className={banner === 2 ? 'box-carousel second active' : 'box-carousel second'}>
-        <div className="content-box-carousel">
-          <div className="content-img">
-            <img src={Banner2} alt="Banner 2 Agência Hipno"/>
-          </div>
-          <div className="content-info">
-            <h1>
-              <span className="blue-title"><strong>Dê vida</strong> para seu negócio e use</span> <br/>
-              <span className="orange-title">a internet a seu favor</span>
-            </h1>
-            <div className="sub-title">
-              <div className="line"></div>
-              <span>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
-                veniam, quis nostrud exercitation ullamco 
-              </span>
+      <Fade left when={banner === 2 ? true : false}>
+        <div className={banner === 2 ? 'box-carousel second active' : 'box-carousel second active'}>
+          <div className="content-box-carousel">
+            <div className="content-img">
+              <img src={Banner2} alt="Banner 2 Agência Hipno"/>
             </div>
-            <div className="content-button">
-              <button>
+            <div className="content-info">
+              <h1>
+                <span className="blue-title"><strong>Dê vida</strong> para seu negócio e use</span> <br/>
+                <span className="orange-title">a internet a seu favor</span>
+              </h1>
+              <div className="sub-title">
+                <div className="line"></div>
                 <span>
-                  Fale com a gente
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
+                  veniam, quis nostrud exercitation ullamco 
                 </span>
-                <div className="icon">
-                  <img src={RightArrow} alt="Seta pra Direita"/>
-                </div>
-              </button>
-              <button>
-                <span>
-                  Confira nosso blog!
-                </span>
-                <div className="icon">
-                  <img src={RightArrow} alt="Seta pra Direita"/>
-                </div>
-              </button>
+              </div>
+              <div className="content-button">
+                <button>
+                  <span>
+                    Fale com a gente
+                  </span>
+                  <div className="icon">
+                    <img src={RightArrow} alt="Seta pra Direita"/>
+                  </div>
+                </button>
+                <button>
+                  <span>
+                    Confira nosso blog!
+                  </span>
+                  <div className="icon">
+                    <img src={RightArrow} alt="Seta pra Direita"/>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </Fade>
       <div className={banner === 3 ? 'box-carousel third active' : 'box-carousel third'}>
         <div className="content-img">
           <img src={Banner3} alt="Banner 3 Agência Hipno"/>
