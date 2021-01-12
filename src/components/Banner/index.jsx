@@ -57,7 +57,7 @@ const Banner = () => {
         </div>
       </div>
       <Fade left when={banner === 2 ? true : false}>
-        <div className={banner === 2 ? 'box-carousel second active' : 'box-carousel second active'}>
+        <div className={banner === 2 ? 'box-carousel second active' : 'box-carousel second activ'}>
           <div className="content-box-carousel">
             <div className="content-img">
               <img src={Banner2} alt="Banner 2 Agência Hipno"/>
