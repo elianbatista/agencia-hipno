@@ -12,6 +12,9 @@ import SuporteWeb from '../../images/servicos/suporte-web.png'
 
 import EuSeiMarketing from '../../images/parceiros/eu-sei-marketing.png'
 
+import BatePapo from '../../images/icons/bate-papo.png'
+import Trofeu from '../../images/icons/trofeu.png'
+
 import Fade from 'react-reveal/Fade'
 import Bounce from 'react-reveal/Bounce'
 
@@ -159,22 +162,112 @@ const Container = () => {
             <div className="icon">
               <img src={DesenvolvimentoWeb} alt="Desenvolvimento Web"/>
             </div>
+            <div className="title">
+              Desenvolvimento Web
+            </div>
           </div>
           <div className="box-servico">
             <div className="icon">
               <img src={Branding} alt="Branding"/>
+            </div>
+            <div className="title">
+              Branding
             </div>
           </div>
           <div className="box-servico">
             <div className="icon">
               <img src={WebDesign} alt="Web Design"/>
             </div>
+            <div className="title">
+              Web Design
+            </div>
           </div>
           <div className="box-servico">
             <div className="icon">
               <img src={SuporteWeb} alt="Suporte Web"/>
             </div>
+            <div className="title">
+              Suporte Web
+            </div>
           </div>
+        </div>
+      </section>
+      <section className="nosso-time">
+        <div className="content-title">
+          <div className="content-barra">
+            <div className="barra"></div>
+          </div>
+          <h2>
+            Nosso Time
+          </h2>
+        </div>
+        <div className="content-card">
+          <div className="card">
+            <div className="title">
+              EXP
+            </div>
+            <p>
+              Lorem ipsum dolor sit amedfdfdfdft, consectetur adipiscing elit, sed do eiusfdfdfmod tempor incididunt ut labore et dolore 
+            </p>
+          </div>
+          <div className="card">
+            <div className="title">
+              3+
+            </div>
+            <p>
+              Lorem ipsum dolor sit amedfdfdfdft, consectetur adipiscing elit, sed do eiusfdfdfmod tempor incididunt ut labore et dolore 
+            </p>
+          </div>
+          <div className="card">
+            <div className="title">
+              80%
+            </div>
+            <p>
+              Lorem ipsum dolor sit amedfdfdfdft, consectetur adipiscing elit, sed do eiusfdfdfmod tempor incididunt ut labore et dolore 
+            </p>
+          </div>
+        </div>
+        <div className="content-horizontal-card">
+          <div className="card">
+            <div className="icon">
+              <img src={BatePapo} alt="Icone Bate Papo - Agência Hipno"/>
+            </div>
+            <div className="content-info">
+              <div className="title">
+                Transparência
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
+                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
+              </p>
+            </div>
+          </div>
+          <div className="card">
+            <div className="icon">
+              <img src={Trofeu} alt="Icone Troféu - Agência Hipno"/>
+            </div>
+            <div className="content-info">
+              <div className="title">
+                Satisfação
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
+                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="content-title">
+          <div className="content-barra">
+            <div className="barra"></div>
+          </div>
+          <h2>
+            Nosso Processo
+          </h2>
         </div>
       </section>
     </div>
