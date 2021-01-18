@@ -10,7 +10,7 @@ import './styles.scss'
 const Index: React.FC = () => {
   const windowSize = window.innerHeight
 
-  const [page, setPage] = useState(1)
+  const [menu, setMenu] = useState(false)
 
   function handleScrollWrapper(event: any) {
     const scrollValue = event.target.scrollTop
@@ -19,16 +19,17 @@ const Index: React.FC = () => {
   }
 
   function scrollSetPage(scrollValue: number) {
-    if (scrollValue >= windowSize) {
-      setPage(2)
+    console.log(scrollValue)
+    if (scrollValue >= 500) {
+      setMenu(true)
     } else {
-      setPage(1)
+      setMenu(false)
     }
   }
 
   return (
     <div className="container">
-      <LateralMenu page={page} />
+      <LateralMenu active={menu} />
       <div  className="wrapper" onScroll={handleScrollWrapper}>
         <Topo />
         <Banner />
