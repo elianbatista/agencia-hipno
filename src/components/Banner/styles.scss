@@ -27,61 +27,24 @@
     position: absolute;
     width: 100%;
     height: 90%;
-    opacity: 0;
-    visibility: hidden;
-    &.active {
-      opacity: 1;
-      visibility: visible;
-      transition: all .3s;
-      &.first {
-        .content-img {
-          img {
-            margin-left: -20%;
-            transition: all .5s;
-          }
-        }
-        .content-title {
-          transform: translateX(0);
-          transition: all 1s;
-        }
-        .content-info {
-          .sub-title {
-            transform: translateX(0);
-            transition: all 1.4s;
-          }
-          p {
-            transform: translateX(0);
-            transition: all 1.6s;
-          }
-          .content-button {
-            button {
-              transform: translateX(0);
-              transition: all 1.6s;
-              &:last-child {
-                transition: all 2s;
-              }
-            }
-          }
-        }
-      }
-    }
     &.first {
       .content-img {
         position: relative;
         width: 100%;
         height: 100%;
+        z-index: 2;
         img {
-          margin-left: -100%;
+          margin-left: -20%;
           width: auto;
           height: 100%;
         }
       }
       .content-title {
         position: absolute;
+        z-index: 3;
         right: 0;
         width: 40%;
         top: 8%;
-        transform: translateX(100%);
         h1 {
           position: absolute;
           left: -57%;
@@ -100,6 +63,7 @@
       }
       .content-info {
         position: absolute;
+        z-index: 3;
         top: 50%;
         right: 0;
         width: 40%;
@@ -109,7 +73,6 @@
           display: flex;
           align-items: center;
           margin-bottom: 2rem;
-          transform: translateX(100%);
           .line {
             height: 1px;
             width: 3rem;
@@ -130,7 +93,6 @@
           line-height: 2rem;
           opacity: 0.6;
           margin-bottom: 3rem;
-          transform: translateX(100%);
         }
         .content-button {
           display: flex;
@@ -147,7 +109,6 @@
             background-color: #FF9D00;
             padding: 1.4rem;
             border-radius: 50px;
-            transform: translateX(160%);
             cursor: pointer;
             span {
               margin-right: 1rem;
