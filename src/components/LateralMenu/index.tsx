@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 
 import './styles.scss'
 
@@ -7,18 +7,12 @@ import FirstSection from './FirstSection'
 import Menu from './Menu'
 
 interface Props {
-  page: number
+  active: boolean
 }
 
 const LateralMenu: React.FC<Props> = ({
-  page
+  active
 }) => {
-  
-  useEffect(() => {
-    console.log(page)
-  }, [page])
-
-  const [firstPage, setFirstPage] = useState(false)
 
   const [menu, setMenu] = useState([
     {
@@ -60,8 +54,8 @@ const LateralMenu: React.FC<Props> = ({
       <div className="content-logo" onClick={() => handleMenu(2)}>
         <img src={Logo} alt="Logo Agência Hipno"/>
       </div>
-      <FirstSection active={firstPage} />
-      <Menu items={menu} />
+      <FirstSection active={!active} />
+      <Menu items={menu} active={active} />
     </div>
   )
 }
