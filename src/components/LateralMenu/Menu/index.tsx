@@ -5,6 +5,7 @@ import './styles.scss'
 
 interface Props {
   items: ItemInterface[]
+  active: boolean
 }
 
 interface ItemInterface {
@@ -14,10 +15,11 @@ interface ItemInterface {
 }
 
 export const Menu: React.FC<Props> = ({
-  items
+  items,
+  active
 }) => {
   return (
-    <div className="section-lateral-content-menu">
+    <div className={active ? 'section-lateral-content-menu active' : 'section-lateral-content-menu'}>
       <ul className="menu">
         {
           items.map(item => {
