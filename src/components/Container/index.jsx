@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 
 import Icon1 from '../../images/icons/icon1.png'
 import Icon2 from '../../images/icons/icon2.png'
@@ -20,7 +20,30 @@ import Bounce from 'react-reveal/Bounce'
 
 import './styles.scss'
 
-const Container = () => {
+const Container = (props) => {
+  const videoProcesso = useRef(null)
+
+  const [coordenadasProcesso, setCoordenadasProcesso] = useState(0)
+  const [processoPlay, setProcessoPlay] = useState(false)
+
+
+  useEffect(() => {
+    const position_video_processo = videoProcesso.current.getBoundingClientRect()
+    setCoordenadasProcesso(position_video_processo.y - position_video_processo.height - 600)
+  }, [videoProcesso])
+
+  useEffect(() => {
+    if(props.scroll >= coordenadasProcesso && coordenadasProcesso !== 0) {
+      setProcessoPlay(true)
+    }
+  }, [props.scroll, coordenadasProcesso])
+
+  useEffect(() => {
+    if(processoPlay) {
+      videoProcesso.current.play()
+    }
+  }, [processoPlay])
+
   return (
     <div className="container-section">
       <section className="sobre">
@@ -268,6 +291,131 @@ const Container = () => {
           <h2>
             Nosso Processo
           </h2>
+        </div>
+        <div className="content-video-processo">
+          <video ref={videoProcesso} muted>
+            <source src="/videos/processo.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </section>
+      <section className="blog">
+        <div className="content-title">
+          <div className="content-barra">
+            <div className="barra"></div>
+          </div>
+          <h2>
+            Blog
+          </h2>
+        </div>
+        <div className="content-posts">
+          <div className="box-post">
+            <div className="content-image">
+              <img src="https://respostas.sebrae.com.br/wp-content/uploads/2020/06/tecnology-806x440.jpg" alt=""/>
+            </div>
+            <div className="content-info">
+              <div className="info-post">
+                <h3>
+                  Teste de post novo muito interessante leiam
+                </h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do tempor incididunt ut labore et dolore veniam, quis nostrud exercitation ullamco laboris nisi 
+                  ut aliquip commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
+                </p>
+              </div>
+              <div className="bottom-info">
+                <div className="left-side">
+                  <div className="person-image">
+                    <img src="https://yt3.ggpht.com/ytc/AAUvwnisZjqzQuQuxZCG-efLedEwZ_avAuN4BuN64pezMw=s900-c-k-c0x00ffffff-no-rj" alt=""/>
+                  </div>
+                  <div className="content-person">
+                    <div className="name">
+                      João Paulo Arrombado da Silva
+                    </div>
+                    <div className="date">
+                      Publicado em Outubro, 2022
+                    </div>
+                  </div>
+                </div>
+                <div className="right-side">
+                  <div className="link">
+                    Leia o artigo
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="box-post">
+            <div className="content-image">
+              <img src="https://respostas.sebrae.com.br/wp-content/uploads/2020/06/tecnology-806x440.jpg" alt=""/>
+            </div>
+            <div className="content-info">
+              <div className="info-post">
+                <h3>
+                  Teste de post novo muito interessante leiam
+                </h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do tempor incididunt ut labore et dolore veniam, quis nostrud exercitation ullamco laboris nisi 
+                  ut aliquip commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
+                </p>
+              </div>
+              <div className="bottom-info">
+                <div className="left-side">
+                  <div className="person-image">
+                    <img src="https://yt3.ggpht.com/ytc/AAUvwnisZjqzQuQuxZCG-efLedEwZ_avAuN4BuN64pezMw=s900-c-k-c0x00ffffff-no-rj" alt=""/>
+                  </div>
+                  <div className="content-person">
+                    <div className="name">
+                      João Paulo Arrombado da Silva
+                    </div>
+                    <div className="date">
+                      Publicado em Outubro, 2022
+                    </div>
+                  </div>
+                </div>
+                <div className="right-side">
+                  <div className="link">
+                    Leia o artigo
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="box-post">
+            <div className="content-image">
+              <img src="https://respostas.sebrae.com.br/wp-content/uploads/2020/06/tecnology-806x440.jpg" alt=""/>
+            </div>
+            <div className="content-info">
+              <div className="info-post">
+                <h3>
+                  Teste de post novo muito interessante leiam
+                </h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do tempor incididunt ut labore et dolore veniam, quis nostrud exercitation ullamco laboris nisi 
+                  ut aliquip commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
+                </p>
+              </div>
+              <div className="bottom-info">
+                <div className="left-side">
+                  <div className="person-image">
+                    <img src="https://yt3.ggpht.com/ytc/AAUvwnisZjqzQuQuxZCG-efLedEwZ_avAuN4BuN64pezMw=s900-c-k-c0x00ffffff-no-rj" alt=""/>
+                  </div>
+                  <div className="content-person">
+                    <div className="name">
+                      João Paulo Arrombado da Silva
+                    </div>
+                    <div className="date">
+                      Publicado em Outubro, 2022
+                    </div>
+                  </div>
+                </div>
+                <div className="right-side">
+                  <div className="link">
+                    Leia o artigo
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>

@@ -262,6 +262,118 @@
           }
         }
       }
+      .content-video-processo {
+        padding: 0 20rem;
+        padding-top: 4rem;
+        video {
+          width: 100%;
+        }
+      }
+    }
+    &.blog {
+      padding: 6rem 5rem;
+      .content-title {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5rem;
+        .content-barra {
+          position: relative;
+          height: 1.8rem;
+          width: 2rem;
+          overflow: hidden;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 0.8rem;
+          .barra {
+            position: relative;
+            width: 0.8rem;
+            height: 4rem;
+            background-color: #FF9D00;
+            transform: rotate(30deg);
+          }
+        }
+        h2 {
+          font-family: 'Grold', sans-serif;
+          font-weight: 800;
+          font-size: 2.8rem;
+          color: #402B2B;
+        }
+      }
+      .content-posts {
+        .box-post {
+          display: flex;
+          margin-bottom: 5rem;
+          .content-image {
+            width: 34%;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: center;
+            }
+          }
+          .content-info {
+            width: 44%;
+            padding-left: 2.6rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .info-post {
+              h3 {
+                font-size: 1.6rem;
+                font-weight: 600;
+                color: #777;
+                margin-bottom: 2rem;
+              }
+              p {
+                font-size: 0.9rem;
+                line-height: 2rem;
+                margin-bottom: 2.4rem;
+              }
+            }
+            .bottom-info {
+              display: flex;
+              justify-content: space-between;
+              align-items: flex-end;
+              padding-bottom: 1rem;
+              .left-side {
+                display: flex;
+                align-items: center;
+                .person-image {
+                  margin-right: 1rem;
+                  img {
+                    width: 4rem;
+                    border-radius: 50%;
+                  }
+                }
+                .content-person {
+                  .name {
+                    font-size: 0.9rem;
+                    font-weight: 600;
+                    margin-bottom: 0.4rem;
+                    color: #777;
+                  }
+                  .date {
+                    font-size: 0.9rem;
+                    color: #777;
+                  }
+                }
+              }
+              .right-side {
+                padding-bottom: 1rem;
+                .link {
+                  font-size: 0.9rem;
+                  font-weight: 600;
+                  color: #FF9D00;
+                  font-weight: 600;
+                  cursor: pointer;
+                }  
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
