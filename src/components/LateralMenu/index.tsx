@@ -3,15 +3,18 @@ import React, { useState } from 'react'
 import './styles.scss'
 
 import Logo from '../../images/logo.png'
+import LogoBranca from '../../images/logo-branca.png'
 import FirstSection from './FirstSection'
 import Menu from './Menu'
 
 interface Props {
   active: boolean
+  black: boolean
 }
 
 const LateralMenu: React.FC<Props> = ({
-  active
+  active,
+  black
 }) => {
 
   const [menu, setMenu] = useState([
@@ -50,9 +53,10 @@ const LateralMenu: React.FC<Props> = ({
   }
 
   return (
-    <div className="content-lateral-menu">
+    <div className={black ? 'content-lateral-menu black' : 'content-lateral-menu'}>
       <div className="content-logo" onClick={() => handleMenu(2)}>
-        <img src={Logo} alt="Logo Agência Hipno"/>
+        <img src={Logo} className="normal-logo" alt="Logo Agência Hipno"/>
+        <img src={LogoBranca} className="logo-branca" alt="Logo Branca Agência Hipno"/>
       </div>
       <FirstSection active={!active} />
       <Menu items={menu} active={active} />
