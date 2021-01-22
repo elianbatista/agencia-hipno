@@ -18,8 +18,12 @@ export const Menu: React.FC<Props> = ({
   items,
   active
 }) => {
+  let classMenu = 'section-lateral-content-menu'
+  if (active) {
+    classMenu += ' active'
+  }
   return (
-    <div className={active ? 'section-lateral-content-menu active' : 'section-lateral-content-menu'}>
+    <div className={classMenu}>
       <ul className="menu">
         {
           items.map(item => {
