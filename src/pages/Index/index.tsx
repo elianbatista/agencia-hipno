@@ -6,34 +6,43 @@ import Banner from '../../components/Banner'
 import Container from '../../components/Container'
 
 import './styles.scss'
+import Footer from '../../components/Footer'
 
 const Index: React.FC = () => {
   const windowSize = window.innerHeight
 
   const [menu, setMenu] = useState(false)
+  const [menuBlack, setMenuBlack] = useState(false)
+  const [scroll, setScroll] = useState(0)
 
   function handleScrollWrapper(event: any) {
-    const scrollValue = event.target.scrollTop
+    setScroll(event.target.scrollTop)
     
-    scrollSetPage(scrollValue)
+    scrollSetPage(scroll)
   }
 
   function scrollSetPage(scrollValue: number) {
-    console.log(scrollValue)
     if (scrollValue >= 500) {
       setMenu(true)
     } else {
       setMenu(false)
     }
+
+    if (scrollValue >= 2800) {
+      setMenuBlack(true)
+    } else {
+      setMenuBlack(false)
+    }
   }
 
   return (
     <div className="container">
-      <LateralMenu active={menu} />
+      <LateralMenu active={menu} black={menuBlack} />
       <div  className="wrapper" onScroll={handleScrollWrapper}>
         <Topo />
         <Banner />
-        <Container />
+        <Container scroll={scroll} />
+        <Footer />
       </div>
     </div>
   )
