@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import { FaCaretRight } from 'react-icons/fa'
 
 import './styles.scss'
+import './responsive.scss'
 
 import Logo from '../../images/logo.png'
 import LogoBranca from '../../images/logo-branca.png'
@@ -45,6 +47,8 @@ const LateralMenu: React.FC<Props> = ({
     }
   ])
 
+  const [mobileActive, SetMobileActive] = useState(false)
+
   function handleMenu(id: number) {
     const newMenu = menu.map(item => {
       return item.id === id ? { ...item, active: true } : { ...item, active: false }
@@ -52,8 +56,21 @@ const LateralMenu: React.FC<Props> = ({
     setMenu(newMenu)
   }
 
+  let lateralMenuClass = 'content-lateral-menu'
+
+  if (black) {
+    lateralMenuClass += ' black'
+  }
+
+  if (mobileActive) {
+    lateralMenuClass += ' mobile-active'
+  }
+
   return (
-    <div className={black ? 'content-lateral-menu black' : 'content-lateral-menu'}>
+    <div className={lateralMenuClass}>
+      <div className="hamburguer" onClick={() => SetMobileActive(!mobileActive)}>
+        <FaCaretRight />
+      </div>
       <div className="content-logo" onClick={() => handleMenu(2)}>
         <img src={Logo} className="normal-logo" alt="Logo Agência Hipno"/>
         <img src={LogoBranca} className="logo-branca" alt="Logo Branca Agência Hipno"/>
