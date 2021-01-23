@@ -8,6 +8,7 @@ import RightArrow from '../../images/icons/right-arrow.png'
 import Fade from 'react-reveal/Fade'
 
 import './styles.scss'
+import './responsive.scss'
 
 const Banner = () => {
 
@@ -17,10 +18,21 @@ const Banner = () => {
     setBanner(1)
   }, [])
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (banner !== 3) {
+        setBanner(banner + 1)
+      } else {
+        setBanner(1)
+      }
+    }, 8000);
+    return () => clearInterval(interval);
+  }, [banner])
+
   return (
     <div className="carousel">
       <Fade when={banner === 1 ? true : false}>
-        <div className='box-carousel first'>
+        <div className={banner === 1 ? 'box-carousel first active' : 'box-carousel first'}>
           <div className="content-img">
             <Fade left delay={300} when={banner === 1 ? true : false}>
               <img src={Banner1} alt="Banner 1 Agência Hipno"/>
@@ -77,7 +89,7 @@ const Banner = () => {
         </div>
       </Fade>
       <Fade left when={banner === 2 ? true : false}>
-        <div className='box-carousel second'>
+        <div className={banner === 2 ? 'box-carousel second active' : 'box-carousel second'}>
           <div className="content-box-carousel">
             <div className="content-img">
               <img src={Banner2} alt="Banner 2 Agência Hipno"/>
@@ -117,7 +129,7 @@ const Banner = () => {
         </div>
       </Fade>
       <Fade left when={banner === 3 ? true : false}>
-        <div className='box-carousel third'>
+        <div className={banner === 3 ? 'box-carousel third active' : 'box-carousel third'}>
           <div className="content-img">
             <img src={Banner3} alt="Banner 3 Agência Hipno"/>
           </div>

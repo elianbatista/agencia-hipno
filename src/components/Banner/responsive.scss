@@ -1,0 +1,115 @@
+@media (max-width: 1600px) {
+  .carousel {
+    .box-carousel {
+      &.first {
+        .content-title {
+          h1 {
+            font-size: 4rem;
+          }
+        }
+        .content-info {
+          padding-top: 5rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1500px) {
+  .carousel {
+    .box-carousel {
+      &.first {
+        .content-info {
+          padding-top: 7rem;
+          .content-button {
+            button {
+              width: 48%;
+              span {
+                margin-right: 0.4rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .carousel {
+    .box-carousel {
+      &.first {
+        .content-title {
+          top: 5%;
+          h1 {
+            font-size: 3.6rem;
+          }
+        }
+        .content-info {
+          padding-top: 13rem;
+          .content-button {
+            flex-wrap: wrap;
+            button {
+              width: 100%;
+              margin-bottom: 1rem;
+              span {
+                margin-right: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1240px) {
+  .carousel {
+    .box-carousel {
+      &.first {
+        .content-img {
+          margin-left: 0;
+          padding: 0 1rem;
+        }
+        .content-title {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          h1 {
+            position: relative;
+            left: 0;
+            width: auto;
+          }
+        }
+        .content-info {
+          right: 50%;
+          transform: translateX(50%) translateY(-50%);
+          width: 60%;
+          .sub-title {
+            span {
+              color: #fff;
+            }
+          }
+          p {
+            color: #fff;
+          }
+          .content-button {
+            flex-wrap: nowrap;
+            button {
+              width: 48%;
+              margin-bottom: 1rem;
+              span {
+                margin-right: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    .content-dots {
+      width: 100%;
+      justify-content: center;
+      margin-left: 0 !important;
+    }
+  }
+}
