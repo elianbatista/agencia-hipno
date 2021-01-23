@@ -2,6 +2,7 @@
   position: relative;
 
   padding: 2rem;
+  background-color: #fff;
   border-right: 1px solid rgb(219, 219, 219);
 
   display: flex;
@@ -9,6 +10,29 @@
   align-items: center;
 
   transition: all .5s ease-in-out;
+  .hamburguer {
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%) translateX(-50%);
+    background-color: #FF9D00;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+    transition: all .5s;
+    svg {
+      margin-left: 5px;
+      color: #fff;
+      font-size: 2.7rem;
+    }
+  }
   .content-logo {
     position: relative;
     padding-bottom: 2rem;
