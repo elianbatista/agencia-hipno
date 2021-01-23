@@ -1,0 +1,47 @@
+@media (max-width: 1400px) {
+  .content-lateral-menu {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    bottom: 0;
+    left: -160px;
+    background-color: #fff !important;
+    border-color:rgb(219, 219, 219) !important;
+    .content-logo {
+      img {
+        &.normal-logo {
+          opacity: 1 !important;
+          visibility: visible !important;
+        }
+        &.logo-branca {
+          opacity: 0 !important;
+          visibility: hidden !important;
+        }
+      }
+    }
+    .section-lateral-content-menu {
+      ul.menu {
+        li {
+          color: #000 !important;
+        }
+      }
+      .content-icons {
+        .icon {
+          background-color: #ccc !important;
+          color: #fff !important;
+        }
+      }
+    }
+    .hamburguer {
+      visibility: visible;
+      opacity: 1;
+    }
+    &.mobile-active {
+      left: 0;
+      .hamburguer {
+        transform: translateY(-50%) translateX(-50%) rotate(-180deg);
+      }
+    }
+    
+  }
+}
