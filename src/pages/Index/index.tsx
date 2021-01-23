@@ -6,6 +6,8 @@ import Banner from '../../components/Banner'
 import Container from '../../components/Container'
 
 import './styles.scss'
+import './responsive.scss'
+
 import Footer from '../../components/Footer'
 
 const Index: React.FC = () => {
@@ -28,7 +30,7 @@ const Index: React.FC = () => {
       setMenu(false)
     }
 
-    if (scrollValue >= 2800) {
+    if (scrollValue >= 2800 && scrollValue < 4300) {
       setMenuBlack(true)
     } else {
       setMenuBlack(false)
