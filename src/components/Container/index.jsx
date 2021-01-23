@@ -14,17 +14,22 @@ import EuSeiMarketing from '../../images/parceiros/eu-sei-marketing.png'
 
 import BatePapo from '../../images/icons/bate-papo.png'
 import Trofeu from '../../images/icons/trofeu.png'
+import RightArrow from '../../images/icons/right-arrow.png'
 
 import Fade from 'react-reveal/Fade'
 import Bounce from 'react-reveal/Bounce'
 
 import './styles.scss'
+import './responsive.scss'
 
 const Container = (props) => {
   const videoProcesso = useRef(null)
+  const videoCallToAction = useRef(null)
 
   const [coordenadasProcesso, setCoordenadasProcesso] = useState(0)
+  const [coordenadasCallToAction, setCoordenadasCallToAction] = useState(0)
   const [processoPlay, setProcessoPlay] = useState(false)
+  const [callToActionPlay, setCallToActionPlay] = useState(false)
 
 
   useEffect(() => {
@@ -33,16 +38,33 @@ const Container = (props) => {
   }, [videoProcesso])
 
   useEffect(() => {
+    const position_call_to_cation = videoCallToAction.current.getBoundingClientRect()
+    setCoordenadasCallToAction(position_call_to_cation.y - position_call_to_cation.height + 400)
+  }, [videoCallToAction])
+
+  useEffect(() => {
     if(props.scroll >= coordenadasProcesso && coordenadasProcesso !== 0) {
       setProcessoPlay(true)
     }
   }, [props.scroll, coordenadasProcesso])
 
   useEffect(() => {
+    if(props.scroll >= coordenadasCallToAction && coordenadasCallToAction !== 0) {
+      setCallToActionPlay(true)
+    }
+  }, [props.scroll, coordenadasCallToAction])
+
+  useEffect(() => {
     if(processoPlay) {
       videoProcesso.current.play()
     }
   }, [processoPlay])
+
+  useEffect(() => {
+    if(callToActionPlay) {
+      videoCallToAction.current.play()
+    }
+  })
 
   return (
     <div className="container-section">
@@ -118,7 +140,7 @@ const Container = (props) => {
           </Bounce>
         </div>
       </section>
-      <section className="parceiros">
+      {/* <section className="parceiros">
         <h2>
           Nossos Parceiros
         </h2>
@@ -164,7 +186,7 @@ const Container = (props) => {
             </div>
           </Fade>
         </div>
-      </section>
+      </section> */}
       <section className="servicos">
         <div className="content-title">
           <div className="content-barra">
@@ -415,6 +437,28 @@ const Container = (props) => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <section className="call-to-action">
+        <div className="content-video-call-to-action">
+          <video ref={videoCallToAction} muted>
+            <source src="/videos/setas-call-to-action.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div className="content-info">
+          <h2>
+            Comece seu projeto com a gente!
+          </h2>
+          <div className="content-button">
+            <button>
+              <span>
+                Fale conosco
+              </span>
+              <div className="icon">
+                <img src={RightArrow} alt="Seta pra Direita"/>
+              </div>
+            </button>
           </div>
         </div>
       </section>

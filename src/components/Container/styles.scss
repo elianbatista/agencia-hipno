@@ -172,6 +172,7 @@
           }
           .title {
             font-weight: 600;
+            text-align: center;
             font-size: 1.3rem;
             color: #402B2B;
           }
@@ -369,6 +370,58 @@
                   font-weight: 600;
                   cursor: pointer;
                 }  
+              }
+            }
+          }
+        }
+      }
+    }
+    &.call-to-action {
+      position: relative;
+      .content-video-call-to-action {
+        position: relative;
+        z-index: 2;
+        video {
+          width: 100%;
+        }
+      }
+      .content-info {
+        position: absolute;
+        z-index: 3;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 6rem 5rem;
+        h2 {
+          position: relative;
+          z-index: 3;
+          text-align: center;
+          font-size: 3rem;
+          margin-bottom: 4rem;
+          font-weight: 500;
+          color: #fff;
+        }
+        .content-button {
+          position: relative;
+          z-index: 3;
+          display: flex;
+          justify-content: center;
+          button {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            padding: 1.2rem 1.4rem;
+            cursor: pointer;
+            span {
+              color:  #FF9D00;
+              margin-right: 0.8rem;
+              font-size: 1rem;
+            }
+            .icon {
+              display: flex;
+              img {
+                filter: invert(52%) sepia(86%) saturate(830%) hue-rotate(1deg) brightness(105%) contrast(104%);
+                width: 40px;
               }
             }
           }

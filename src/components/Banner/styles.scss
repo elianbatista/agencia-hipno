@@ -22,21 +22,22 @@
 .carousel {
   position: relative;
   width: 100%;
-  height: 90%;
   .box-carousel {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 90%;
+    visibility: hidden;
+    &.active {
+      visibility: visible;
+    }
     &.first {
+      position: relative;
       .content-img {
-        position: relative;
         width: 100%;
-        height: 100%;
-        z-index: 2;
+        margin-left: -40%;
         img {
-          margin-left: -20%;
-          width: auto;
-          height: 100%;
+          width: 100%;
         }
       }
       .content-title {
@@ -142,17 +143,13 @@
       padding: 4rem 6rem;
       .content-box-carousel {
         position: relative;
-        width: 100%;
-        height: 100%;
         .content-img {
           display: flex;
           justify-content: center;
           align-items: center;
-          overflow: hidden;
-          height: 100%;
-          border-radius: 30px;
           img {
             width: 100%;
+            border-radius: 30px;
           }
         }
         .content-info {
@@ -253,11 +250,10 @@
       .content-img {
         position: relative;
         width: 100%;
-        height: 100%;
         img {
           margin-left: 40%;
-          width: auto;
-          height: 100%;
+          width: 100%;
+          border-radius: 30px;
         }
       }
       .content-title {
@@ -360,27 +356,23 @@
     }
   }
   .content-dots {
-    position: absolute;
-    top: 90%;
     padding: 2rem 0;
     display: flex;
     align-items: center;
     opacity: 0;
     transition: all .5s;
+    margin-bottom: 5rem;
     &.first {
       opacity: 1;
-      left: 30%;
-      transform: translateX(0%);
+      margin-left: 30%;
     }
     &.second {
       opacity: 1;
-      left: 50%;
-      transform: translateX(-50%);
+      margin-left: 50%;
     }
     &.third {
       opacity: 1;
-      left: 70%;
-      transform: translateX(0%);
+      margin-left: 70%;
     }
     .dot {
       height: 10px;
