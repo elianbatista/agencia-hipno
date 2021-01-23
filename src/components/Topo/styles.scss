@@ -1,5 +1,5 @@
 header {
-  padding: 0 3rem;
+  padding: 2rem 3rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -8,12 +8,18 @@ header {
     flex-grow: 1;
     padding-right: 5rem;
 
+    .content-logo {
+      display: none;
+      img {
+        width: 150px;  
+      }
+    }
+
     ul.menu {
       display: flex;
       align-items: center;
       justify-content: space-around;
       list-style: none;
-      padding: 2rem 0;
 
       li {
         font-weight: 400;

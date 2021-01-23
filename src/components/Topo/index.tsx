@@ -1,12 +1,18 @@
 import React from 'react'
 import { FaBehance, FaFacebookF, FaInstagram } from 'react-icons/fa'
 
+import Logo from '../../images/logo.png'
+
 import './styles.scss'
+import './responsive.scss'
 
 const Topo: React.FC = () => {
   return(
     <header>
       <div className="left-side">
+        <div className="content-logo">
+          <img src={Logo} alt="Logo Agência Hipno"/>
+        </div>
         <ul className="menu">
           <li className="active">
             Home
