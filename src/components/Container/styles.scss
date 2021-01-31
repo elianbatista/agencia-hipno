@@ -264,7 +264,6 @@
         }
       }
       .content-video-processo {
-        padding: 0 20rem;
         padding-top: 4rem;
         video {
           width: 100%;
@@ -306,8 +305,10 @@
           display: flex;
           margin-bottom: 5rem;
           .content-image {
+            position: relative;
             width: 34%;
             img {
+              position: absolute;
               width: 100%;
               height: 100%;
               object-fit: cover;
