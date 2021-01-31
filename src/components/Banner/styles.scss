@@ -38,6 +38,10 @@
         margin-left: -40%;
         img {
           width: 100%;
+          border-radius: 30px;
+          &:nth-child(2) {
+            display: none;
+          }
         }
       }
       .content-title {
@@ -150,6 +154,9 @@
           img {
             width: 100%;
             border-radius: 30px;
+            &:nth-child(2) {
+              display: none;
+            }
           }
         }
         .content-info {
@@ -254,6 +261,9 @@
           margin-left: 40%;
           width: 100%;
           border-radius: 30px;
+          &:nth-child(2) {
+            display: none;
+          }
         }
       }
       .content-title {

@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react'
 
 import Banner1 from '../../images/banner/banner1.png'
+import Banner1Mobile from '../../images/banner/banner1-mobile.png'
 import Banner2 from '../../images/banner/banner2.png'
+import Banner2Mobile from '../../images/banner/banner2-mobile.png'
 import Banner3 from '../../images/banner/banner3.png'
+import Banner3Mobile from '../../images/banner/banner3-mobile.png'
 import RightArrow from '../../images/icons/right-arrow.png'
 
 import Fade from 'react-reveal/Fade'
@@ -21,9 +24,9 @@ const Banner = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       if (banner !== 3) {
-        setBanner(banner + 1)
+        //setBanner(banner + 1)
       } else {
-        setBanner(1)
+        //setBanner(1)
       }
     }, 8000);
     return () => clearInterval(interval);
@@ -35,7 +38,8 @@ const Banner = () => {
         <div className={banner === 1 ? 'box-carousel first active' : 'box-carousel first'}>
           <div className="content-img">
             <Fade left delay={300} when={banner === 1 ? true : false}>
-              <img src={Banner1} alt="Banner 1 Agência Hipno"/>
+              <img src={Banner1} class="desktop" alt="Banner 1 Desktop Agência Hipno"/>
+              <img src={Banner1Mobile} class="mobile" alt="Banner 2 Desktop Agência Hipno"/>
             </Fade>
           </div>
           <div className="content-title">
@@ -92,7 +96,10 @@ const Banner = () => {
         <div className={banner === 2 ? 'box-carousel second active' : 'box-carousel second'}>
           <div className="content-box-carousel">
             <div className="content-img">
-              <img src={Banner2} alt="Banner 2 Agência Hipno"/>
+              <Fade left delay={300} when={banner === 2 ? true : false}>
+                <img src={Banner2} class="desktop" alt="Banner 2 Desktop Agência Hipno"/>
+                <img src={Banner2Mobile} class="mobile" alt="Banner 2 Mobile Agência Hipno"/>
+              </Fade>
             </div>
             <div className="content-info">
               <h1>
@@ -131,7 +138,8 @@ const Banner = () => {
       <Fade left when={banner === 3 ? true : false}>
         <div className={banner === 3 ? 'box-carousel third active' : 'box-carousel third'}>
           <div className="content-img">
-            <img src={Banner3} alt="Banner 3 Agência Hipno"/>
+            <img src={Banner3} class="dekstop" alt="Banner 3 Agência Hipnos"/>
+            <img src={Banner3Mobile} class="mobile" alt="Banner 3 Mobile Agência Hipnos"/>
           </div>
           <div className="content-title">
             <h1>
