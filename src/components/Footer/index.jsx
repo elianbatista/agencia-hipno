@@ -4,6 +4,7 @@ import { FaBehance, FaFacebookF, FaInstagram, FaMapMarkerAlt, FaWhatsapp } from 
 import Logo from '../../images/logo.png'
 
 import './styles.scss'
+import './responsive.scss'
 
 const Footer = () => {
   return (
