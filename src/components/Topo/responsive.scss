@@ -2,10 +2,77 @@
   header {
     .left-side {
       .content-logo {
-        display: block;
+        display: flex;
       }
       ul.menu {
         display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 730px) {
+  header {
+    padding: 1rem 3rem;
+    .right-side {
+      .content-icons {
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        flex-direction: column;
+        .icon {
+          margin-right: 0;
+          margin-bottom: 1rem;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+      span.phone {
+        border-left: none;
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    .left-side {
+      padding-right: 0;
+      .content-logo {
+        img {
+          width: 130px;
+        }
+      }
+    }
+    .right-side {
+      span.phone {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 1rem 2rem;
+    .left-side {
+      .content-logo {
+        img {
+          width: 110px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  header {
+    padding: 1rem;
+    .right-side {
+      span.phone {
+        font-size: 0.7rem;
       }
     }
   }
