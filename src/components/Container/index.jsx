@@ -78,10 +78,10 @@ const Container = (props) => {
           </h2>
         </div>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
-          officia deserunt mollit anim id est laborum.
+          Nascida da paixão pela inovação, a Hipnos surgiu da união entre duas áreas essenciais da tecnologia: Desenvolvimento e Design. Após anos de experiência no 
+          mercado, nossos idealizadores resolveram estabelecer um novo padrão no desenvolvimento web, utilizando os mais recentes conceitos no processo de criação, 
+          visando a satisfação visual, eficiência operacional e experiência do usuário. Seja você uma startup ou uma grande empresa, a Hipnos trabalha como uma extensão 
+          da sua equipe, levando nossos recursos e habilidades para sua organização.
         </p>
       </section>
       <section className="cards">
@@ -92,10 +92,10 @@ const Container = (props) => {
                 <img src={Icon1} alt=""/>
               </div>
               <div className="title">
-                Lorem Ipsum
+                Desenvolvimento
               </div>
               <div className="desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                Utilizando as mais recentes tecnologias de desenvolvimento disponíveis, a Hipnos preza pela segurança e estabilidade em seus projetos.
               </div>
             </div>
           </Bounce>
@@ -105,10 +105,11 @@ const Container = (props) => {
                 <img src={Icon2} alt=""/>
               </div>
               <div className="title">
-                Lorem Ipsum
+                União
               </div>
               <div className="desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                Nada mais importante para uma equipe do que trabalhar como um time para alcançar seus objetivos. Essa é a proposta da Hipnos, trabalhar em conjuntos com 
+                seus colaboradores.
               </div>
             </div>
           </Bounce>
@@ -118,10 +119,10 @@ const Container = (props) => {
                 <img src={Icon3} alt=""/>
               </div>
               <div className="title">
-                Lorem Ipsum
+                Criatividade
               </div>
               <div className="desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                Nossa equipe de UX/UI olha individualmente para cada projeto, criando designes e interfaces únicos para seus clientes.
               </div>
             </div>
           </Bounce>
@@ -131,10 +132,10 @@ const Container = (props) => {
                 <img src={Icon4} alt=""/>
               </div>
               <div className="title">
-                Lorem Ipsum
+                Paixão
               </div>
               <div className="desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                Nada adianta toda tecnologia disponível se não houver paixão pelo que se faz. E isso a Hipnos tem de sobra!
               </div>
             </div>
           </Bounce>
@@ -197,10 +198,16 @@ const Container = (props) => {
           </h2>
         </div>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-          quis nostrud exercitation ullamco Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  ut labore et dolore magna 
-          aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-          incididunt  ut labore et dolore magna aliqua. Ut enim ad minim 
+          A web é fluida e está sempre em movimento. nossa abordagem para serviços criativos e experiência do usuário também está em constante evolução, pois nos dedicamos 
+          a acompanhar as tecnologias emergentes e transformar as expectativas do público.
+        </p>
+        <p>
+          Por meio de nosso detalhado processo de projeto de design, trabalharemos para garantir que sua estratégia de conteúdo alcance seus objetivos e envolva 
+          profundamente seu público para contar sua história com eficácia e construir relacionamentos duradouros.
+        </p>
+        <p>
+          Quer você precise de um site, aplicativo móvel, branding ou sistema web, nossos especialistas em design e desenvolvimento web garantirão que a experiência do 
+          usuário esteja de acordo com as expectativas de nossos clientes.
         </p>
         <div className="content-servicos">
           <div className="box-servico">
@@ -252,7 +259,7 @@ const Container = (props) => {
               EXP
             </div>
             <p>
-              Lorem ipsum dolor sit amedfdfdfdft, consectetur adipiscing elit, sed do eiusfdfdfmod tempor incididunt ut labore et dolore 
+              Toda nossa equipe é composta por profissionais com anos de experiência no mercado de design e desenvolvimento.
             </p>
           </div>
           <div className="card">
@@ -260,7 +267,7 @@ const Container = (props) => {
               3+
             </div>
             <p>
-              Lorem ipsum dolor sit amedfdfdfdft, consectetur adipiscing elit, sed do eiusfdfdfmod tempor incididunt ut labore et dolore 
+              Todo projeto desenvolvido pela Hipnos envolve pelo menos 3 de nossos profissionais, um de cada área. Garantido a eficiência desde o escopo até a entrega.
             </p>
           </div>
           <div className="card">
@@ -268,7 +275,7 @@ const Container = (props) => {
               80%
             </div>
             <p>
-              Lorem ipsum dolor sit amedfdfdfdft, consectetur adipiscing elit, sed do eiusfdfdfmod tempor incididunt ut labore et dolore 
+              De cobertura de serviços. Atendemos praticamente qualquer área de negócio! (alterar a porcentagem para 90).
             </p>
           </div>
         </div>
@@ -282,10 +289,8 @@ const Container = (props) => {
                 Transparência
               </div>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
-                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
+                Nosso processo de criação envolve a participação dos nossos clientes em todas as etapas de desenvolvimento. Desde a fase embrionária do projeto até sua 
+                finalização, fazemos questão de sempre consultar nossos parceiros para alcançar os objetivos delimitados.
               </p>
             </div>
           </div>
@@ -298,10 +303,8 @@ const Container = (props) => {
                 Satisfação
               </div>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
-                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
+                Com nosso processo diferenciado de criação, garantimos a satisfação dos nossos clientes. A Hipnos trabalha para que seus projetos sejam entregues em tempo 
+                hábil, sem perder a qualidade da ideia inicial. 
               </p>
             </div>
           </div>

@@ -34,7 +34,7 @@
       p {
         color: #494949;
         font-size: 1rem;
-        line-height: 1.6rem;
+        line-height: 2rem;
         width: 66%;
       }
     }
@@ -145,12 +145,13 @@
       }
       p {
         font-size: 1rem;
-        line-height: 1.8rem;
+        line-height: 2rem;
         color: #494949;
-        margin-bottom: 5rem;
+        margin-bottom: 1.4rem;
       }
       .content-servicos {
         display: flex;
+        padding-top: 3rem;
         .box-servico {
           width: 25%;
           display: flex;

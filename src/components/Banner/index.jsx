@@ -63,8 +63,8 @@ const Banner = () => {
             </div>
             <Fade right delay={1100} when={banner === 1 ? true : false} duration={1400}>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-                nostrud exercitation ullamco 
+                Oferecemos serviços de desenvolvimento de websites e soluções web para ajudá-lo a construir qualquer coisa, desde sites de informações básicas a 
+                aplicativos móveis complexos!
               </p>
             </Fade>
             <div className="content-button">
@@ -109,8 +109,8 @@ const Banner = () => {
               <div className="sub-title">
                 <div className="line"></div>
                 <span>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
-                  veniam, quis nostrud exercitation ullamco 
+                  Faça com que sua marca esteja bem posicionada no mercado por meio da internet, e torne seu negócio muito mais atrativo. Saiba como a Hipnos pode te 
+                  ajudar, (bota aqui em destalhe com um link para a página de serviço)
                 </span>
               </div>
               <div className="content-button">
@@ -155,8 +155,7 @@ const Banner = () => {
               </span>
             </div>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-              nostrud exercitation ullamco 
+              Somos uma agência digital completa, diga o que seu negócio precisa que encontraremos as soluções para você. Vamos consolidar a imagem de sua marca na internet.
             </p>
             <div className="content-button">
               <button>
