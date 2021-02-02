@@ -24,9 +24,9 @@ const Banner = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       if (banner !== 3) {
-        //setBanner(banner + 1)
+        setBanner(banner + 1)
       } else {
-        //setBanner(1)
+        setBanner(1)
       }
     }, 8000);
     return () => clearInterval(interval);
