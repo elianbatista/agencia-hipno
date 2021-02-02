@@ -354,7 +354,7 @@ const Container = (props) => {
                   </div>
                   <div className="content-person">
                     <div className="name">
-                      João Paulo Arrombado da Silva
+                      João Paulo Alochio
                     </div>
                     <div className="date">
                       Publicado em Outubro, 2022
@@ -390,7 +390,7 @@ const Container = (props) => {
                   </div>
                   <div className="content-person">
                     <div className="name">
-                      João Paulo Arrombado da Silva
+                      João Paulo Alochio
                     </div>
                     <div className="date">
                       Publicado em Outubro, 2022
@@ -426,7 +426,7 @@ const Container = (props) => {
                   </div>
                   <div className="content-person">
                     <div className="name">
-                      João Paulo Arrombado da Silva
+                      João Paulo Alochio
                     </div>
                     <div className="date">
                       Publicado em Outubro, 2022
