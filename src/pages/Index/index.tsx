@@ -4,6 +4,7 @@ import LateralMenu from '../../components/LateralMenu'
 import Topo from '../../components/Topo'
 import Banner from '../../components/Banner'
 import Container from '../../components/Container'
+import Contato from '../../components/Contato'
 
 import './styles.scss'
 import './responsive.scss'
@@ -16,6 +17,7 @@ const Index: React.FC = () => {
   const [menu, setMenu] = useState(false)
   const [menuBlack, setMenuBlack] = useState(false)
   const [scroll, setScroll] = useState(0)
+  const [contato, setContato] = useState(false)
 
   function handleScrollWrapper(event: any) {
     setScroll(event.target.scrollTop)
@@ -39,9 +41,11 @@ const Index: React.FC = () => {
 
   return (
     <div className="container">
+      <Contato active={contato} />
+      <div className={contato ? 'background-gray active' : 'background-gray'} onClick={() => setContato(false)}></div>
       <LateralMenu active={menu} black={menuBlack} />
-      <div  className="wrapper" onScroll={handleScrollWrapper}>
-        <Topo />
+      <div  className={contato ? 'wrapper no-scroll' : 'wrapper'} onScroll={handleScrollWrapper}>
+        <Topo setContato={setContato} />
         <Banner />
         <Container scroll={scroll} />
         <Footer />
