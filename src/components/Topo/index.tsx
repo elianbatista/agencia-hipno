@@ -6,7 +6,13 @@ import Logo from '../../images/logo.png'
 import './styles.scss'
 import './responsive.scss'
 
-const Topo: React.FC = () => {
+interface Props {
+  setContato: any
+}
+
+const Topo: React.FC<Props> = ({
+  setContato
+}) => {
   return(
     <header>
       <div className="left-side">
@@ -32,7 +38,7 @@ const Topo: React.FC = () => {
           <li>
             Portfolio
           </li>
-          <li className="button">
+          <li className="button" onClick={() => setContato(true)}>
             Fale Conosco
           </li>
         </ul>
