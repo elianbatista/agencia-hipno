@@ -272,10 +272,10 @@ const Container = (props) => {
           </div>
           <div className="card">
             <div className="title">
-              80%
+              90%
             </div>
             <p>
-              De cobertura de serviços. Atendemos praticamente qualquer área de negócio! (alterar a porcentagem para 90).
+              De cobertura de serviços. Atendemos praticamente qualquer área de negócio!
             </p>
           </div>
         </div>
