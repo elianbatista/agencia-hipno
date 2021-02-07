@@ -250,7 +250,7 @@ const Container = (props) => {
             <div className="barra"></div>
           </div>
           <h2>
-            Nosso Time
+            Nosso Time 
           </h2>
         </div>
         <div className="content-card">
