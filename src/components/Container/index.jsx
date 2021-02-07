@@ -92,7 +92,7 @@ const Container = (props) => {
                 <img src={Icon1} alt=""/>
               </div>
               <div className="title">
-                Desenvolvimento
+                Inovação
               </div>
               <div className="desc">
                 Utilizando as mais recentes tecnologias de desenvolvimento disponíveis, a Hipnos preza pela segurança e estabilidade em seus projetos.
