@@ -259,7 +259,7 @@ const Container = (props) => {
               EXP
             </div>
             <p>
-              Toda nossa equipe é composta por profissionais com anos de experiência no mercado de design e desenvolvimento.
+              Toda nossa equipe é composta por profissionais com anos de experiência no mercado de design e desenvolvimento. 
             </p>
           </div>
           <div className="card">
