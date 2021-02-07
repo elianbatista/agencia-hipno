@@ -45,10 +45,22 @@
         display: flex;
         justify-content: space-between;
         .box-card {
-          border: 3px solid #FF9D00;
-          border-radius: 16px;
+          position: relative;
           width: 23%;
-          padding: 3rem 1.4rem;
+          cursor: pointer;
+          .internal-box {
+            position: relative;
+            height: 100%;
+            border: 3px solid #FF9D00;
+            border-radius: 16px;
+            padding: 3rem 1.4rem;
+            transition: all .4s;
+          }
+          &:hover {
+            .internal-box {
+              transform: translateY(-20px);
+            }
+          }
           .icon {
             display: flex;
             justify-content: center;
@@ -72,16 +84,24 @@
             text-align: center;
           }
           &.purple {
-            border-color: #5D4984;
+            .internal-box {
+              border-color: #5D4984;
+            }
           }
           &.blue {
-            border-color: #0062B5;
+            .internal-box {
+              border-color: #0062B5;
+            }
           }
           &.green {
-            border-color: #009055;
+            .internal-box {
+              border-color: #009055;
+            }
           }
           &.red {
-            border-color: #C94F37;
+            .internal-box {
+              border-color: #C94F37;
+            }
           }
         }
       }
