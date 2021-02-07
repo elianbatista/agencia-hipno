@@ -88,54 +88,62 @@ const Container = (props) => {
         <div className="content-cards">
           <Bounce left duration={2000} delay={200}>
             <div className="box-card purple">
-              <div className="icon">
-                <img src={Icon1} alt=""/>
-              </div>
-              <div className="title">
-                Inovação
-              </div>
-              <div className="desc">
-                Utilizando as mais recentes tecnologias de desenvolvimento disponíveis, a Hipnos preza pela segurança e estabilidade em seus projetos.
+              <div className="internal-box">
+                <div className="icon">
+                  <img src={Icon1} alt=""/>
+                </div>
+                <div className="title">
+                  Inovação
+                </div>
+                <div className="desc">
+                  Utilizando as mais recentes tecnologias de desenvolvimento disponíveis, a Hipnos preza pela segurança e estabilidade em seus projetos.
+                </div>
               </div>
             </div>
           </Bounce>
           <Bounce left duration={2000} delay={400}>
             <div className="box-card blue">
-              <div className="icon">
-                <img src={Icon2} alt=""/>
-              </div>
-              <div className="title">
-                União
-              </div>
-              <div className="desc">
-                Nada mais importante para uma equipe do que trabalhar como um time para alcançar seus objetivos. Essa é a proposta da Hipnos, trabalhar em conjuntos com 
-                seus colaboradores.
+              <div className="internal-box">
+                <div className="icon">
+                  <img src={Icon2} alt=""/>
+                </div>
+                <div className="title">
+                  União
+                </div>
+                <div className="desc">
+                  Nada mais importante para uma equipe do que trabalhar como um time para alcançar seus objetivos. Essa é a proposta da Hipnos, trabalhar em conjuntos com 
+                  seus colaboradores.
+                </div>
               </div>
             </div>
           </Bounce>
           <Bounce left duration={2000} delay={600}>
             <div className="box-card green">
-              <div className="icon">
-                <img src={Icon3} alt=""/>
-              </div>
-              <div className="title">
-                Criatividade
-              </div>
-              <div className="desc">
-                Nossa equipe de UX/UI olha individualmente para cada projeto, criando designes e interfaces únicos para seus clientes.
+              <div className="internal-box">
+                <div className="icon">
+                  <img src={Icon3} alt=""/>
+                </div>
+                <div className="title">
+                  Criatividade
+                </div>
+                <div className="desc">
+                  Nossa equipe de UX/UI olha individualmente para cada projeto, criando designes e interfaces únicos para seus clientes.
+                </div>
               </div>
             </div>
           </Bounce>
           <Bounce left duration={2000} delay={800}>
             <div className="box-card red">
-              <div className="icon">
-                <img src={Icon4} alt=""/>
-              </div>
-              <div className="title">
-                Paixão
-              </div>
-              <div className="desc">
-                Nada adianta toda tecnologia disponível se não houver paixão pelo que se faz. E isso a Hipnos tem de sobra!
+              <div className="internal-box">
+                <div className="icon">
+                  <img src={Icon4} alt=""/>
+                </div>
+                <div className="title">
+                  Paixão
+                </div>
+                <div className="desc">
+                  Nada adianta toda tecnologia disponível se não houver paixão pelo que se faz. E isso a Hipnos tem de sobra!
+                </div>
               </div>
             </div>
           </Bounce>
