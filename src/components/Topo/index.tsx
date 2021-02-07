@@ -30,9 +30,6 @@ const Topo: React.FC<Props> = ({
             Serviços
           </li>
           <li>
-            Suporte
-          </li>
-          <li>
             Contato
           </li>
           <li>
