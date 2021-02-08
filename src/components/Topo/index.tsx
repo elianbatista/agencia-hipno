@@ -6,6 +6,7 @@ import Logo from '../../images/logo.png'
 import './styles.scss'
 import './responsive.scss'
 import { MenuInterface } from '../../models/menu'
+import { link } from 'fs'
 
 interface Props {
   menu: MenuInterface[]
@@ -29,11 +30,21 @@ const Topo: React.FC<Props> = ({
         <ul className="menu">
           {
             menu.map(item => {
-              return (
-                <li key={item.id} className={item.active ? 'active' : ''} onClick={() => handleMenu(item.id)}>
-                  { item.titulo }
-                </li>
-              )
+              if (item.link !== '') {
+                return (
+                  <a href={item.link} target={item.id === 4 ? '_blank' : ''}>
+                    <li key={item.id} className={item.active ? 'active' : ''}>
+                      { item.titulo }
+                    </li>
+                  </a>
+                )
+              } else {
+                return (
+                  <li key={item.id} className={item.active ? 'active' : ''} onClick={() => handleMenu(item.id)}>
+                    { item.titulo }
+                  </li>
+                )
+              }
             })
           }
           <li className="button" onClick={() => setContato(true)}>
@@ -43,15 +54,19 @@ const Topo: React.FC<Props> = ({
       </div>
       <div className="right-side">
         <div className="content-icons">
-          <div className="icon">
-            <FaBehance />
-          </div>
+          <a href="https://www.behance.net/agenciahipnos" target="_blank">
+            <div className="icon">
+              <FaBehance />
+            </div>
+          </a>
           <div className="icon">
             <FaFacebookF />
           </div>
-          <div className="icon">
-            <FaInstagram />
-          </div>
+          <a href="https://www.instagram.com/agenciahipnos/" target="_blank">
+            <div className="icon">
+              <FaInstagram />
+            </div>
+          </a>
         </div>
         <span className="phone">
           +55 (28) 9 9961-4261
