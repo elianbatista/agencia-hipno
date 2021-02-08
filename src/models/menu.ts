@@ -3,4 +3,5 @@ export interface MenuInterface {
   titulo: string
   class: string
   active: boolean
+  link: string
 }
