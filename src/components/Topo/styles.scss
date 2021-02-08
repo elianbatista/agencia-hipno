@@ -20,7 +20,9 @@ header {
       align-items: center;
       justify-content: space-around;
       list-style: none;
-
+      a {
+        text-decoration: none;
+      }
       li {
         font-weight: 400;
         font-size: 1rem;
