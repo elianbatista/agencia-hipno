@@ -1,22 +1,19 @@
 import React from 'react'
 import { FaBehance, FaFacebookF, FaInstagram } from 'react-icons/fa'
+import { MenuInterface } from '../../../models/menu'
 
 import './styles.scss'
 
 interface Props {
-  items: ItemInterface[]
+  menu: MenuInterface[]
   active: boolean
-}
-
-interface ItemInterface {
-  id: number
-  titulo: string
-  active: boolean
+  handleMenu: any
 }
 
 export const Menu: React.FC<Props> = ({
-  items,
-  active
+  menu,
+  active,
+  handleMenu
 }) => {
   let classMenu = 'section-lateral-content-menu'
   if (active) {
@@ -26,9 +23,9 @@ export const Menu: React.FC<Props> = ({
     <div className={classMenu}>
       <ul className="menu">
         {
-          items.map(item => {
+          menu.map(item => {
             return (
-              <li key={item.id} className={item.active ? 'active' : ''}>
+              <li key={item.id} className={item.active ? 'active' : ''} onClick={() => handleMenu(item.id)}>
                 { item.titulo }
               </li>
             )
