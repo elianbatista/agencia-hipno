@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react'
+import { useRef, useEffect, useState } from 'react'
 
 import Icon1 from '../../images/icons/icon1.png'
 import Icon2 from '../../images/icons/icon2.png'
@@ -10,13 +10,10 @@ import Branding from '../../images/servicos/branding.png'
 import WebDesign from '../../images/servicos/web-design.png'
 import SuporteWeb from '../../images/servicos/suporte-web.png'
 
-import EuSeiMarketing from '../../images/parceiros/eu-sei-marketing.png'
-
 import BatePapo from '../../images/icons/bate-papo.png'
 import Trofeu from '../../images/icons/trofeu.png'
 import RightArrow from '../../images/icons/right-arrow.png'
 
-import Fade from 'react-reveal/Fade'
 import Bounce from 'react-reveal/Bounce'
 
 import './styles.scss'
@@ -30,7 +27,6 @@ const Container = (props) => {
   const [coordenadasCallToAction, setCoordenadasCallToAction] = useState(0)
   const [processoPlay, setProcessoPlay] = useState(false)
   const [callToActionPlay, setCallToActionPlay] = useState(false)
-
 
   useEffect(() => {
     const position_video_processo = videoProcesso.current.getBoundingClientRect()
