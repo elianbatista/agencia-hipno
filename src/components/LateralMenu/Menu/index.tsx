@@ -22,15 +22,25 @@ export const Menu: React.FC<Props> = ({
   return (
     <div className={classMenu}>
       <ul className="menu">
-        {
-          menu.map(item => {
+      {
+        menu.map(item => {
+          if (item.link !== '') {
+            return (
+              <a href={item.link} target={item.id === 4 ? '_blank' : ''}>
+                <li key={item.id} className={item.active ? 'active' : ''}>
+                  { item.titulo }
+                </li>
+              </a>
+            )
+          } else {
             return (
               <li key={item.id} className={item.active ? 'active' : ''} onClick={() => handleMenu(item.id)}>
                 { item.titulo }
               </li>
             )
-          })
-        }
+          }
+        })
+      }
       </ul>
       <div className="content-circles">
         <div className="circle"></div>
@@ -38,15 +48,19 @@ export const Menu: React.FC<Props> = ({
         <div className="circle"></div>
       </div>
       <div className="content-icons">
-        <div className="icon">
-          <FaBehance />
-        </div>
+        <a href="https://www.behance.net/agenciahipnos" target="_blank">
+          <div className="icon">
+            <FaBehance />
+          </div>
+        </a>
         <div className="icon">
           <FaFacebookF />
         </div>
-        <div className="icon">
-          <FaInstagram />
-        </div>
+        <a href="https://www.instagram.com/agenciahipnos/" target="_blank">
+          <div className="icon">
+            <FaInstagram />
+          </div>
+        </a>
       </div>
     </div>
   )
