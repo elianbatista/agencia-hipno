@@ -28,25 +28,29 @@ const Index: React.FC = () => {
       id: 1,
       titulo: 'Home',
       class: 'home',
-      active: true
+      active: true,
+      link: ''
     },
     {
       id: 2,
       titulo: 'Sobre',
       class: 'sobre',
-      active: false
+      active: false,
+      link: ''
     },
     {
       id: 3,
       titulo: 'Serviços',
       class: 'servicos',
-      active: false
+      active: false,
+      link: '/servicos'
     },
     {
-      id: 5,
+      id: 4,
       titulo: 'Portfolio',
       class: 'portfolio',
-      active: false
+      active: false,
+      link: 'https://www.behance.net/agenciahipnos'
     }
   ])
 
@@ -64,7 +68,6 @@ const Index: React.FC = () => {
 
   function handleScrollWrapper(event: any) {
     setScroll(event.target.scrollTop)
-    console.log(scroll)
     scrollSetPage(scroll)
   }
 
@@ -73,8 +76,6 @@ const Index: React.FC = () => {
       if (item.id === id) {
         if (item.class === 'home') {
           handleScrollTo(0)
-        } else if (item.class === 'servicos') {
-          handleScrollTo(wrapper.current?.offsetHeight + positionServicosSection?.y - positionServicosSection?.height)
         } else if (item.class === 'sobre') {
           handleScrollTo(wrapper.current?.offsetHeight + positionSobreSection?.y - positionSobreSection?.height)
         }
