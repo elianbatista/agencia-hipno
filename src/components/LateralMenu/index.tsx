@@ -8,53 +8,21 @@ import Logo from '../../images/logo.png'
 import LogoBranca from '../../images/logo-branca.png'
 import FirstSection from './FirstSection'
 import Menu from './Menu'
-
+import { MenuInterface } from '../../models/menu'
 interface Props {
   active: boolean
   black: boolean
+  menu: MenuInterface[]
+  handleMenu: any
 }
 
 const LateralMenu: React.FC<Props> = ({
   active,
-  black
+  black,
+  menu,
+  handleMenu
 }) => {
-
-  const [menu, setMenu] = useState([
-    {
-      id: 1,
-      titulo: 'Home',
-      active: true
-    },
-    {
-      id: 2,
-      titulo: 'Sobre',
-      active: false
-    },
-    {
-      id: 3,
-      titulo: 'Serviços',
-      active: false
-    },
-    {
-      id: 4,
-      titulo: 'Suporte',
-      active: false
-    },
-    {
-      id: 5,
-      titulo: 'Portfolio',
-      active: false
-    }
-  ])
-
   const [mobileActive, SetMobileActive] = useState(false)
-
-  function handleMenu(id: number) {
-    const newMenu = menu.map(item => {
-      return item.id === id ? { ...item, active: true } : { ...item, active: false }
-    })
-    setMenu(newMenu)
-  }
 
   let lateralMenuClass = 'content-lateral-menu'
 
@@ -72,11 +40,13 @@ const LateralMenu: React.FC<Props> = ({
         <FaCaretRight />
       </div>
       <div className="content-logo" onClick={() => handleMenu(2)}>
-        <img src={Logo} className="normal-logo" alt="Logo Agência Hipno"/>
-        <img src={LogoBranca} className="logo-branca" alt="Logo Branca Agência Hipno"/>
+        <a href="/">
+          <img src={Logo} className="normal-logo" alt="Logo Agência Hipno"/>
+          <img src={LogoBranca} className="logo-branca" alt="Logo Branca Agência Hipno"/>
+        </a>
       </div>
       <FirstSection active={!active} />
-      <Menu items={menu} active={active} />
+      <Menu menu={menu} active={active} handleMenu={handleMenu} />
     </div>
   )
 }
