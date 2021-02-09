@@ -92,7 +92,7 @@ const Servicos: React.FC = () => {
           </div>
         </section>
         <div className="content-servicos">
-          <div className="box-servico">
+          <div className="box-servico" id="desenvolvimento">
             <div className="top-line"></div>
             <div className="left-side">
               <div className="top-title">
@@ -146,7 +146,7 @@ const Servicos: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="box-servico">
+          <div className="box-servico" id="design">
             <div className="top-line"></div>
             <div className="left-side">
               <div className="top-title">
