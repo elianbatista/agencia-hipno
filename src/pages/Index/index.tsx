@@ -110,7 +110,7 @@ const Index: React.FC = () => {
       <LateralMenu active={menu} black={menuBlack} menu={itensMenu} handleMenu={handleMenu} />
       <div  className={contato ? 'wrapper no-scroll' : 'wrapper'} onScroll={handleScrollWrapper} ref={wrapper}>
         <Topo menu={itensMenu} handleMenu={handleMenu} setContato={setContato} />
-        <Banner />
+        <Banner setContato={setContato} />
         <Container scroll={scroll} scrollTo={scrollTo} />
         <Footer />
       </div>
