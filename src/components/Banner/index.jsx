@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 import Banner1 from '../../images/banner/banner1.png'
 import Banner1Mobile from '../../images/banner/banner1-mobile.png'
@@ -13,8 +13,7 @@ import Fade from 'react-reveal/Fade'
 import './styles.scss'
 import './responsive.scss'
 
-const Banner = () => {
-
+const Banner = (props) => {
   const [banner, setBanner] = useState(0)
 
   useEffect(() => {
@@ -69,24 +68,28 @@ const Banner = () => {
             </Fade>
             <div className="content-button">
               <Fade right delay={1200} when={banner === 1 ? true : false}>
-                <button>
-                  <span>
-                    Desenvolvimento
-                  </span>
-                  <div className="icon">
-                    <img src={RightArrow} alt="Seta pra Direita"/>
-                  </div>
-                </button>
+                <a href="/servicos#desenvolvimento">
+                  <button>
+                    <span>
+                      Desenvolvimento
+                    </span>
+                    <div className="icon">
+                      <img src={RightArrow} alt="Seta pra Direita"/>
+                    </div>
+                  </button>
+                </a>
               </Fade>
               <Fade right delay={1300} when={banner === 1 ? true : false}>
-                <button>
-                  <span>
-                    Design
-                  </span>
-                  <div className="icon">
-                    <img src={RightArrow} alt="Seta pra Direita"/>
-                  </div>
-                </button>
+                <a href="/servicos#design">
+                  <button>
+                    <span>
+                      Design
+                    </span>
+                    <div className="icon">
+                      <img src={RightArrow} alt="Seta pra Direita"/>
+                    </div>
+                  </button>
+                </a>
               </Fade>
             </div>
           </div>
@@ -114,7 +117,7 @@ const Banner = () => {
                 </span>
               </div>
               <div className="content-button">
-                <button>
+                <button onClick={() => props.setContato(true)}>
                   <span>
                     Fale com a gente
                   </span>
@@ -158,22 +161,26 @@ const Banner = () => {
               Somos uma agência digital completa, diga o que seu negócio precisa que encontraremos as soluções para você. Vamos consolidar a imagem de sua marca na internet.
             </p>
             <div className="content-button">
-              <button>
-                <span>
-                  Veja nosso portfólio!
-                </span>
-                <div className="icon">
-                  <img src={RightArrow} alt="Seta pra Direita"/>
-                </div>
-              </button>
-              <button>
-                <span>
-                  Confira nosso insta!
-                </span>
-                <div className="icon">
-                  <img src={RightArrow} alt="Seta pra Direita"/>
-                </div>
-              </button>
+              <a href="https://www.behance.net/agenciahipnos" target="_blank">
+                <button>
+                  <span>
+                    Veja nosso portfólio!
+                  </span>
+                  <div className="icon">
+                    <img src={RightArrow} alt="Seta pra Direita"/>
+                  </div>
+                </button>
+              </a>
+              <a href="https://www.instagram.com/agenciahipnos/" target="_blank">
+                <button>
+                  <span>
+                    Confira nosso insta!
+                  </span>
+                  <div className="icon">
+                    <img src={RightArrow} alt="Seta pra Direita"/>
+                  </div>
+                </button>
+              </a>
             </div>
           </div>
         </div>
