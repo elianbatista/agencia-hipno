@@ -4,6 +4,8 @@ import App from './App'
 
 import GlobalStyles from './styles/GlobalStyles';
 
+require('dotenv').config()
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

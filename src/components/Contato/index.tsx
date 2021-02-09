@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-
+import sgMail from '@sendgrid/mail'
 import ContatoImagem from '../../images/contato/imagem-contato.jpg'
-
 import { FaMapMarkerAlt, FaWhatsapp, FaEnvelope } from 'react-icons/fa'
 
 import './styles.scss'
@@ -41,6 +40,21 @@ const Contato: React.FC<Props> = ({
     setMensagem(event.target.value)
   }
 
+  function handleSubmit(event: any) {
+    event.preventDefault()
+    sgMail.send({
+      to: 'elianbatista2000@gmail.com',
+      from: 'contato@agenciahipnos.com.br',
+      subject: assunto,
+      html: '<strong>Nome: </strong>' + nome + '<br/><strong>E-mail: </strong>' + email + '<br/><strong>Telefone: </strong>' + telefone + '<br/><strong>Mensagem: </strong>' + mensagem
+    }).then(() => {
+      alert('E-mail enviado com sucesso!')
+    }).catch((err) => {
+      alert('Ocorreu um erro ao enviar o e-mail!')
+      console.log(err)
+    })
+  }
+
   return (
     <section className={active ? 'contato active' : 'contato'}>
       <div className="left-side">
@@ -56,29 +70,29 @@ const Contato: React.FC<Props> = ({
           Fale pra gente um pouco sobre sua necessidade e entraremos em contato o mais rápido
           possível!
         </p>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="field-input">
-            <input type="text" onChange={(event) => handleNome(event)} />
+            <input type="text" onChange={(event) => handleNome(event)} required />
             <label className={nome !== '' ? 'no-animation' : ''}>Nome</label>
             <div className="border-bottom"></div>
           </div>
           <div className="field-input">
-            <input type="text" onChange={(event) => handleEmail(event)} />
+            <input type="text" onChange={(event) => handleEmail(event)} required />
             <label className={email !== '' ? 'no-animation' : ''}>Email</label>
             <div className="border-bottom"></div>
           </div>
           <div className="field-input">
-            <input type="text" onChange={(event) => handleTelefone(event)} />
+            <input type="text" onChange={(event) => handleTelefone(event)} required />
             <label className={telefone !== '' ? 'no-animation' : ''}>Telefone</label>
             <div className="border-bottom"></div>
           </div>
           <div className="field-input">
-            <input type="text" onChange={(event) => handleAssunto(event)} />
+            <input type="text" onChange={(event) => handleAssunto(event)} required/>
             <label className={assunto !== '' ? 'no-animation' : ''}>Assunto</label>
             <div className="border-bottom"></div>
           </div>
           <div className="field-textarea">
-            <textarea onChange={(event) => handleMensagem(event)}></textarea>
+            <textarea onChange={(event) => handleMensagem(event)} required></textarea>
             <label className={mensagem !== '' ? 'no-animation' : ''}>Mensagem</label>
             <div className="border-bottom"></div>
           </div>
@@ -88,7 +102,7 @@ const Contato: React.FC<Props> = ({
             serviços do Google.
           </p>
           <div className="content-button">
-            <button>
+            <button type="submit">
               <div className="background-hover"></div>
               <span>
                 Enviar
