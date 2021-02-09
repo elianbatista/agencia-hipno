@@ -259,18 +259,20 @@ const Container = (props) => {
             </div>
           </div>
         </div>
-        <div className="content-title">
-          <div className="content-barra">
-            <div className="barra"></div>
+        <div className="section-video-processo">
+          <div className="content-title">
+            <div className="content-barra">
+              <div className="barra"></div>
+            </div>
+            <h2>
+              Nosso Processo
+            </h2>
           </div>
-          <h2>
-            Nosso Processo
-          </h2>
-        </div>
-        <div className="content-video-processo">
-          <video ref={videoProcesso} muted>
-            <source src="/videos/processo.mp4" type="video/mp4" />
-          </video>
+          <div className="content-video-processo">
+            <video ref={videoProcesso} muted>
+              <source src="/videos/processo.mp4" type="video/mp4" />
+            </video>
+          </div>
         </div>
       </section>
       <section className="servicos">
