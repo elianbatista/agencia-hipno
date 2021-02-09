@@ -52,10 +52,12 @@
         .content-info {
           padding-top: 7rem;
           .content-button {
-            button {
+            a {
               width: 48%;
-              span {
-                margin-right: 0.4rem;
+              button {
+                span {
+                  margin-right: 0.4rem;
+                }
               }
             }
           }
@@ -73,10 +75,12 @@
         .content-info {
           padding-top: 7rem;
           .content-button {
-            button {
+            a {
               width: 48%;
-              span {
-                margin-right: 0.4rem;
+              button {
+                span {
+                  margin-right: 0.4rem;
+                }
               }
             }
           }
@@ -100,11 +104,13 @@
           padding-top: 13rem;
           .content-button {
             flex-wrap: wrap;
-            button {
+            a {
               width: 100%;
-              margin-bottom: 1rem;
-              span {
-                margin-right: 1rem;
+              button {
+                margin-bottom: 1rem;
+                span {
+                  margin-right: 1rem;
+                }
               }
             }
           }
@@ -121,11 +127,13 @@
           padding-top: 13rem;
           .content-button {
             flex-wrap: wrap;
-            button {
+            a {
               width: 100%;
-              margin-bottom: 1rem;
-              span {
-                margin-right: 1rem;
+              button {
+                margin-bottom: 1rem;
+                span {
+                  margin-right: 1rem;
+                }
               }
             }
           }
@@ -168,11 +176,13 @@
           }
           .content-button {
             flex-wrap: nowrap;
-            button {
+            a {
               width: 48%;
-              margin-bottom: 1rem;
-              span {
-                margin-right: 1rem;
+              button {
+                margin-bottom: 1rem;
+                span {
+                  margin-right: 1rem;
+                }
               }
             }
           }
@@ -212,11 +222,13 @@
           }
           .content-button {
             flex-wrap: nowrap;
-            button {
+            a {
               width: 48%;
-              margin-bottom: 1rem;
-              span {
-                margin-right: 1rem;
+              button {
+                margin-bottom: 1rem;
+                span {
+                  margin-right: 1rem;
+                }
               }
             }
           }
@@ -442,7 +454,7 @@
           .content-button {
             flex-wrap: wrap;
             padding: 0 3rem;
-            button {
+            a {
               width: 100%;
             }
           }
@@ -490,7 +502,7 @@
           }
           .content-button {
             flex-wrap: wrap;
-            button {
+            a {
               width: 100%;
             }
           }

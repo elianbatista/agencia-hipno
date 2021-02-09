@@ -103,40 +103,46 @@
           display: flex;
           align-items: center;
           justify-content: space-between;
-          button {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+          a {
             width: 46%;
-            font-weight: 500;
-            font-size: 0.8rem;
-            color: #fff;
-            background-color: #FF9D00;
-            padding: 1.4rem;
-            border-radius: 50px;
-            cursor: pointer;
-            span {
-              margin-right: 1rem;
-              transition: all .3s;
-            }
-            .icon {
+            text-decoration: none;
+            button {
               display: flex;
-              img {
-                width: 2rem;
+              align-items: center;
+              justify-content: space-between;
+              width: 100%;
+              font-weight: 500;
+              font-size: 0.8rem;
+              color: #fff;
+              background-color: #FF9D00;
+              padding: 1.4rem;
+              border-radius: 50px;
+              cursor: pointer;
+              span {
+                margin-right: 1rem;
                 transition: all .3s;
+              }
+              .icon {
+                display: flex;
+                img {
+                  width: 2rem;
+                  transition: all .3s;
+                }
+              }
+              &:hover {
+                span {
+                  transform: translateX(10px);
+                }
+                .icon {
+                  img {
+                    transform: translateX(10px);
+                  }
+                }
               }
             }
             &:last-child {
-              background-color: #4F34FF;
-            }
-            &:hover {
-              span {
-                transform: translateX(10px);
-              }
-              .icon {
-                img {
-                  transform: translateX(10px);
-                }
+              button {
+                background-color: #4F34FF;
               }
             }
           }
@@ -324,40 +330,46 @@
           display: flex;
           align-items: center;
           justify-content: space-between;
-          button {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+          a {
             width: 46%;
-            font-weight: 500;
-            font-size: 0.8rem;
-            color: #fff;
-            background-color: #FF9D00;
-            padding: 1.4rem;
-            border-radius: 50px;
-            cursor: pointer;
-            span {
-              margin-right: 1rem;
-              transition: all .3s;
-            }
-            .icon {
+            text-decoration: none;
+            button {
               display: flex;
-              img {
-                width: 2rem;
+              align-items: center;
+              justify-content: space-between;
+              width: 100%;
+              font-weight: 500;
+              font-size: 0.8rem;
+              color: #fff;
+              background-color: #FF9D00;
+              padding: 1.4rem;
+              border-radius: 50px;
+              cursor: pointer;
+              span {
+                margin-right: 1rem;
                 transition: all .3s;
+              }
+              .icon {
+                display: flex;
+                img {
+                  width: 2rem;
+                  transition: all .3s;
+                }
+              }
+              &:hover {
+                span {
+                  transform: translateX(10px);
+                }
+                .icon {
+                  img {
+                    transform: translateX(10px);
+                  }
+                }
               }
             }
             &:last-child {
-              background-color: #4F34FF;
-            }
-            &:hover {
-              span {
-                transform: translateX(10px);
-              }
-              .icon {
-                img {
-                  transform: translateX(10px);
-                }
+              button {
+                background-color: #4F34FF;
               }
             }
           }
