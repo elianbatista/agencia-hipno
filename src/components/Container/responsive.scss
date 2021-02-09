@@ -97,6 +97,23 @@
   }
 }
 
+@media (max-width: 900px) {
+  .container-section {
+    section.call-to-action {
+      .content-video-call-to-action {
+        video {
+          &.desktop {
+            display: none;
+          }
+          &.mobile {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 740px) {
   .container-section {
     section {

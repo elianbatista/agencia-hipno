@@ -13,6 +13,7 @@ interface Props {
 const Contato: React.FC<Props> = ({
   active
 }) => {
+  sgMail.setApiKey('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')
 
   const [nome, setNome] = useState('')
   const [email, setEmail] = useState('')
@@ -42,17 +43,6 @@ const Contato: React.FC<Props> = ({
 
   function handleSubmit(event: any) {
     event.preventDefault()
-    sgMail.send({
-      to: 'elianbatista2000@gmail.com',
-      from: 'contato@agenciahipnos.com.br',
-      subject: assunto,
-      html: '<strong>Nome: </strong>' + nome + '<br/><strong>E-mail: </strong>' + email + '<br/><strong>Telefone: </strong>' + telefone + '<br/><strong>Mensagem: </strong>' + mensagem
-    }).then(() => {
-      alert('E-mail enviado com sucesso!')
-    }).catch((err) => {
-      alert('Ocorreu um erro ao enviar o e-mail!')
-      console.log(err)
-    })
   }
 
   return (

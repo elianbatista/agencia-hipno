@@ -6,7 +6,6 @@ import Logo from '../../images/logo.png'
 import './styles.scss'
 import './responsive.scss'
 import { MenuInterface } from '../../models/menu'
-import { link } from 'fs'
 
 interface Props {
   menu: MenuInterface[]

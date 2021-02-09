@@ -22,6 +22,7 @@ import './responsive.scss'
 const Container = (props) => {
   const videoProcesso = useRef(null)
   const videoCallToAction = useRef(null)
+  const videoCallToActionMobile = useRef(null)
 
   const [coordenadasProcesso, setCoordenadasProcesso] = useState(0)
   const [coordenadasCallToAction, setCoordenadasCallToAction] = useState(0)
@@ -59,6 +60,7 @@ const Container = (props) => {
   useEffect(() => {
     if(callToActionPlay) {
       videoCallToAction.current.play()
+      videoCallToActionMobile.current.play()
     }
   })
 
@@ -192,62 +194,6 @@ const Container = (props) => {
           </Fade>
         </div>
       </section> */}
-      <section className="servicos">
-        <div className="content-title">
-          <div className="content-barra">
-            <div className="barra"></div>
-          </div>
-          <h2>
-            Serviços
-          </h2>
-        </div>
-        <p>
-          A web é fluida e está sempre em movimento. nossa abordagem para serviços criativos e experiência do usuário também está em constante evolução, pois nos dedicamos 
-          a acompanhar as tecnologias emergentes e transformar as expectativas do público.
-        </p>
-        <p>
-          Por meio de nosso detalhado processo de projeto de design, trabalharemos para garantir que sua estratégia de conteúdo alcance seus objetivos e envolva 
-          profundamente seu público para contar sua história com eficácia e construir relacionamentos duradouros.
-        </p>
-        <p>
-          Quer você precise de um site, aplicativo móvel, branding ou sistema web, nossos especialistas em design e desenvolvimento web garantirão que a experiência do 
-          usuário esteja de acordo com as expectativas de nossos clientes.
-        </p>
-        <div className="content-servicos">
-          <div className="box-servico">
-            <div className="icon">
-              <img src={DesenvolvimentoWeb} alt="Desenvolvimento Web"/>
-            </div>
-            <div className="title">
-              Desenvolvimento Web
-            </div>
-          </div>
-          <div className="box-servico">
-            <div className="icon">
-              <img src={Branding} alt="Branding"/>
-            </div>
-            <div className="title">
-              Branding
-            </div>
-          </div>
-          <div className="box-servico">
-            <div className="icon">
-              <img src={WebDesign} alt="Web Design"/>
-            </div>
-            <div className="title">
-              Web Design
-            </div>
-          </div>
-          <div className="box-servico">
-            <div className="icon">
-              <img src={SuporteWeb} alt="Suporte Web"/>
-            </div>
-            <div className="title">
-              Suporte Web
-            </div>
-          </div>
-        </div>
-      </section>
       <section className="nosso-time">
         <div className="content-title">
           <div className="content-barra">
@@ -327,7 +273,63 @@ const Container = (props) => {
           </video>
         </div>
       </section>
-      <section className="blog">
+      <section className="servicos">
+        <div className="content-title">
+          <div className="content-barra">
+            <div className="barra"></div>
+          </div>
+          <h2>
+            Serviços
+          </h2>
+        </div>
+        <p>
+          A web é fluida e está sempre em movimento. nossa abordagem para serviços criativos e experiência do usuário também está em constante evolução, pois nos dedicamos 
+          a acompanhar as tecnologias emergentes e transformar as expectativas do público.
+        </p>
+        <p>
+          Por meio de nosso detalhado processo de projeto de design, trabalharemos para garantir que sua estratégia de conteúdo alcance seus objetivos e envolva 
+          profundamente seu público para contar sua história com eficácia e construir relacionamentos duradouros.
+        </p>
+        <p>
+          Quer você precise de um site, aplicativo móvel, branding ou sistema web, nossos especialistas em design e desenvolvimento web garantirão que a experiência do 
+          usuário esteja de acordo com as expectativas de nossos clientes.
+        </p>
+        <div className="content-servicos">
+          <div className="box-servico">
+            <div className="icon">
+              <img src={DesenvolvimentoWeb} alt="Desenvolvimento Web"/>
+            </div>
+            <div className="title">
+              Desenvolvimento Web
+            </div>
+          </div>
+          <div className="box-servico">
+            <div className="icon">
+              <img src={Branding} alt="Branding"/>
+            </div>
+            <div className="title">
+              Branding
+            </div>
+          </div>
+          <div className="box-servico">
+            <div className="icon">
+              <img src={WebDesign} alt="Web Design"/>
+            </div>
+            <div className="title">
+              Web Design
+            </div>
+          </div>
+          <div className="box-servico">
+            <div className="icon">
+              <img src={SuporteWeb} alt="Suporte Web"/>
+            </div>
+            <div className="title">
+              Suporte Web
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* <section className="blog">
         <div className="content-title">
           <div className="content-barra">
             <div className="barra"></div>
@@ -446,11 +448,14 @@ const Container = (props) => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       <section className="call-to-action">
         <div className="content-video-call-to-action">
-          <video ref={videoCallToAction} muted>
+          <video ref={videoCallToAction} class="desktop" muted>
             <source src="/videos/setas-call-to-action.mp4" type="video/mp4" />
+          </video>
+          <video ref={videoCallToActionMobile} class="mobile" muted>
+            <source src="/videos/setas-call-to-action-mobile.mp4" type="video/mp4" />
           </video>
         </div>
         <div className="content-info">
@@ -458,7 +463,7 @@ const Container = (props) => {
             Comece seu projeto com a gente!
           </h2>
           <div className="content-button">
-            <button>
+            <button onClick={() => props.setContato(true)}>
               <span>
                 Fale conosco
               </span>

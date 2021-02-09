@@ -205,6 +205,22 @@
   }
 }
 
+@media (max-width: 470px) {
+  section.topo-servico {
+    margin-bottom: 6rem;
+    .content-info {
+      padding: 8rem 3rem;
+      h1 {
+        font-size: 2.4rem;
+        line-height: 3rem;
+      }
+      h3 {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
 @media (max-width: 450px) {
   .content-servicos {
     .box-servico {
@@ -216,6 +232,22 @@
             line-height: 2rem;
           }
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  section.topo-servico {
+    .content-info {
+      padding: 8rem 2rem;
+      h1 {
+        font-size: 2rem;
+        line-height: 2.6rem;
+      }
+      h3 {
+        font-size: 0.95rem;
+        line-height: 1.5rem
       }
     }
   }

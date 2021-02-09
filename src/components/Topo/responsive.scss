@@ -17,9 +17,13 @@
     .right-side {
       .content-icons {
         position: fixed;
-        bottom: 1rem;
+        z-index: 999;
+        bottom: 0;
         right: 1rem;
         flex-direction: column;
+        a {
+          margin-bottom: 1rem;
+        }
         .icon {
           margin-right: 0;
           margin-bottom: 1rem;

@@ -96,7 +96,7 @@ const Index: React.FC = () => {
       setMenu(false)
     }
 
-    if (scrollValue >= 2800 && scrollValue < 4300) {
+    if (scrollValue >= 1600 && scrollValue < 4000) {
       setMenuBlack(true)
     } else {
       setMenuBlack(false)
@@ -111,7 +111,7 @@ const Index: React.FC = () => {
       <div  className={contato ? 'wrapper no-scroll' : 'wrapper'} onScroll={handleScrollWrapper} ref={wrapper}>
         <Topo menu={itensMenu} handleMenu={handleMenu} setContato={setContato} />
         <Banner setContato={setContato} />
-        <Container scroll={scroll} scrollTo={scrollTo} />
+        <Container scroll={scroll} scrollTo={scrollTo} setContato={setContato} />
         <Footer />
       </div>
     </div>

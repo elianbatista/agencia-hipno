@@ -134,7 +134,6 @@
     &.servicos {
       padding: 8rem 5rem;
       padding-top: 6rem;
-      background-color: rgb(245, 245, 245);
       .content-title {
         display: flex;
         align-items: center;
@@ -405,6 +404,9 @@
         z-index: 2;
         video {
           width: 100%;
+          &.mobile {
+            display: none;
+          }
         }
       }
       .content-info {

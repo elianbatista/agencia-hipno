@@ -1,0 +1,46 @@
+@media (max-width: 1200px) {
+  section.contato {
+    .left-side {
+      .contato-rodape {
+        .content-icon {
+          flex-wrap: wrap;
+          .box-icon {
+            width: 100%;
+            justify-content: center;
+            margin-bottom: 1rem;
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 890px) {
+  section.contato {
+    .left-side {
+      width: 100%;
+    }
+    .right-side {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  section.contato {
+    .left-side {
+      overflow-y: scroll;
+      form {
+        .field-input {
+          width: 100%;
+        }
+      }
+      .contato-rodape {
+        position: relative;
+      }
+    }
+  }
+}
