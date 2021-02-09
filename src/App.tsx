@@ -7,10 +7,8 @@ import Servicos from './pages/Servicos';
 const App: React.FC = () => {
   return (
     <Router>
-      <Switch>
-        <Route exact path ='/' component={Index} />
-        <Route path ='/servicos' component={Servicos} />
-      </Switch>
+      <Route exact path ='/' component={Index} />
+      <Route path ='/servicos' component={Servicos} />
     </Router>
   )
 }
